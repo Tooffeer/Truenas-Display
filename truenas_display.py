@@ -23,7 +23,7 @@ def main():
     image = Image.new('1', (epd.height, epd.width), 255)
     draw = ImageDraw.Draw(image)
 
-    # Fonts
+    # Font
     font_small = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 18)
 
     # Pool Info
@@ -60,5 +60,7 @@ def main():
     epd.display(epd.getbuffer(image))
     epd.sleep() # Sleep
 
-if __name__ == "__main__":
+    timer.sleep(500)
+
+while True:
     main()
